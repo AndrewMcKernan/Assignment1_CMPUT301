@@ -3,21 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/home/chrygore/AndroidStudioProjects/amckerna - CountBook/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="476ec4dffadce05e6bd3e7220a9410d6f7ad5a6d">
-        <dex dex="/home/chrygore/AndroidStudioProjects/amckerna - CountBook/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_9e62fb1cefc134c8b51af6bba03fc2e1364381d3/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/chrygore/AndroidStudioProjects/amckerna - CountBook/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/Assignment1_CMPUT301/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/chrygore/AndroidStudioProjects/amckerna - CountBook/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_b7f3d47f8e7a70443aca864ac5b606018a64fe91/classes.dex" />
+        <dex dex="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7b3d8ad1f786408e39ba10a8bdc7ffa4a0960029/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/Assignment1_CMPUT301/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="76e99f8092d9634a90853cdd7892e74c8e4e56c1">
+        <dex dex="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d72924ad110d1cf7d8b4056c487cb09f2552833e/classes.dex" />
     </item>
 
 </items>
