@@ -15,7 +15,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:onClick="addNewRecord"
+        android:onClick="addItemsTest"
         android:text="@string/addRecordButton"
         app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintLeft_toLeftOf="parent"

@@ -21,14 +21,20 @@ public class MainActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         adapter = new ArrayAdapter<String>(this,
-                android.R.layout.list_content,
+                android.R.layout.simple_list_item_1,
                 listItems);
         setListAdapter(adapter);
     }
 
     public void addNewRecord(View view) {
         // Do something in response to button
+        Intent intent = new Intent(this, AddNewRecordActivity.class);
+        startActivity(intent);
+    }
+
+    public void addItemsTest(View view){
         listItems.add("Clicked: "+clickCounter++);
         adapter.notifyDataSetChanged();
     }
