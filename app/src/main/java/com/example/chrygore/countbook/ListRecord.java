@@ -67,7 +67,7 @@ public class ListRecord {
 
     @Override
     public String toString(){
-        return recordName + " " + getDateOfCreation() + " " + Integer.toString(currentValue);
+        return recordName + "  " + Integer.toString(currentValue) + "  " + getDateOfCreation();
     }
 
 }

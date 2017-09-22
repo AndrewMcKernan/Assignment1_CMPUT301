@@ -4,10 +4,14 @@ import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.sip.SipAudioCall;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
@@ -44,6 +48,16 @@ public class MainActivity extends ListActivity {
         //itemlistview.setAdapter(adapter);
         setListAdapter(adapter);
         adapter.notifyDataSetChanged();
+
+        this.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(MainActivity.this, ViewRecordActivity.class);
+                intent.putExtra("position",i);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public void addNewRecord(View view) {

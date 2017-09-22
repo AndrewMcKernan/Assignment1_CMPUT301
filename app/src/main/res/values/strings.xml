@@ -5,4 +5,7 @@
     <string name="enterInitialRecordValue">Enter Initial Value</string>
     <string name="enterComments">Enter Comments</string>
     <string name="saveRecordButton">Save Record</string>
+    <string name="incrementButton">+</string>
+    <string name="decrementButton">-</string>
+    <string name="editButton">Edit</string>
 </resources>
