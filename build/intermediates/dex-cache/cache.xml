@@ -3,15 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="/home/chrygore/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.0/c4ba5371a29ac9b2ad6129b1d39ea38750043eff/gson-2.8.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.1"
-        sha1="c4ba5371a29ac9b2ad6129b1d39ea38750043eff">
-        <dex dex="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10/gson-2.8.0_7410397cb756a63aeea2364450b4e5fed2ac4d93/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/Assignment1_CMPUT301/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -25,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.1"
-        sha1="b639516fbd171d9b9661d71285a0ce70631f0646">
+        sha1="a478f965887432e6fb2988e8e6ea9fc54273b422">
         <dex dex="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d72924ad110d1cf7d8b4056c487cb09f2552833e/classes.dex" />
     </item>
 

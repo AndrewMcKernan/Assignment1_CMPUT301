@@ -1,6 +1,7 @@
 package com.example.chrygore.countbook;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -12,14 +13,15 @@ public class ListRecord {
     private int currentValue;
     private String recordName;
     private String comments;
-    SimpleDateFormat date = new SimpleDateFormat("yyyy-mm-dd");
+    private Calendar calendar;
 
-    public ListRecord(int initialValue, String title){
-        date.format(new Date());
+    public ListRecord(int initialValue, String title, String comments){
         this.initialValue = initialValue;
         this.currentValue = initialValue;
         this.recordName = title;
-        this.comments = "";
+        this.comments = comments;
+        calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
     }
 
     public String getTitle(){
@@ -38,8 +40,9 @@ public class ListRecord {
         this.comments = comments;
     }
 
-    public SimpleDateFormat getDateOfCreation(){
-        return this.date;
+    public String getDateOfCreation(){
+
+        return calendar.get(Calendar.YEAR) + "-" + calendar.get(Calendar.MONTH) + "-" + calendar.get(Calendar.DAY_OF_MONTH);
     }
 
     public void incrementCurrentValue(){
@@ -64,7 +67,7 @@ public class ListRecord {
 
     @Override
     public String toString(){
-        return recordName + " " + date.toPattern() + " " + Integer.toString(currentValue);
+        return recordName + " " + getDateOfCreation() + " " + Integer.toString(currentValue);
     }
 
 }
