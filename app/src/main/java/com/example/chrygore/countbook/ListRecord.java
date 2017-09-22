@@ -28,6 +28,10 @@ public class ListRecord {
         return this.recordName;
     }
 
+    public void setDate(Date date){
+        calendar.setTime(date);
+    }
+
     public void setTitle(String recordName){
         this.recordName = recordName;
     }
@@ -45,16 +49,9 @@ public class ListRecord {
         return calendar.get(Calendar.YEAR) + "-" + calendar.get(Calendar.MONTH) + "-" + calendar.get(Calendar.DAY_OF_MONTH);
     }
 
-    public void incrementCurrentValue(){
-        this.currentValue++;
-    }
-
-    public void decrementCurrentValue(){
-        this.currentValue--;
-    }
-
     public void setCurrentValue(int currentValue){
-        this.currentValue = currentValue;
+        if (currentValue >= 0)
+            this.currentValue = currentValue;
     }
 
     public int getCurrentValue(){
