@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,17 +19,23 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Date;
+
 import static android.provider.Telephony.Mms.Part.FILENAME;
 
 /**
  * Created by chrygore on 22/09/17.
  */
 
-public class ViewRecordActivity extends AppCompatActivity{
+public class EditRecord extends AppCompatActivity {
+
     int listPosition;
-    ArrayList<ListRecord> listItems;
+    ArrayList<ListRecord> listItems = new ArrayList<ListRecord>();
     ListRecord viewingRecord;
-    @Override
+    TextView date;
+    TextView name;
+    TextView initVal;
+    TextView currVal;
+    TextView comments;
     public void onCreate(Bundle SavedInstanceState){
         super.onCreate(SavedInstanceState);
         setContentView(R.layout.view_record);
@@ -38,35 +46,38 @@ public class ViewRecordActivity extends AppCompatActivity{
     }
 
     public void populatePage(){
-        TextView date = (TextView) findViewById(R.id.dateContainer);
+        date = (TextView) findViewById(R.id.dateContainer);
         date.setText(viewingRecord.getDateOfCreation());
-        TextView name = (TextView) findViewById(R.id.nameContainer);
+        name = (TextView) findViewById(R.id.nameContainer);
         name.setText(viewingRecord.getTitle());
-        TextView initVal = (TextView) findViewById(R.id.initValContainer);
+        initVal = (TextView) findViewById(R.id.initValContainer);
         initVal.setText(Integer.toString(viewingRecord.getInitialValue()));
-        TextView currVal = (TextView) findViewById(R.id.currentValContainer);
+        currVal = (TextView) findViewById(R.id.currentValContainer);
         currVal.setText(Integer.toString(viewingRecord.getCurrentValue()));
-        TextView comments = (TextView) findViewById(R.id.commentsContainer);
+        comments = (TextView) findViewById(R.id.commentsContainer);
         comments.setText(viewingRecord.getComments());
     }
 
-    public void incrementCurrentVal(View view){
-        viewingRecord.setCurrentValue(viewingRecord.getCurrentValue() + 1);
-        viewingRecord.setDate(new Date());
-        populatePage();
-        saveChanges();
-    }
-
-    public void decrementCurrentVal(View view){
-        viewingRecord.setCurrentValue(viewingRecord.getCurrentValue() - 1);
-        viewingRecord.setDate(new Date());
-        populatePage();
-        saveChanges();
-    }
-
-    private void saveChanges(){
+    public void saveChanges(View v){
+        viewingRecord.setTitle(name.getText().toString());
+        if (viewingRecord.getCurrentValue() != Integer.parseInt(currVal.getText().toString())){
+            viewingRecord.setDate(new Date());
+        }
+        viewingRecord.setCurrentValue(Integer.parseInt(currVal.getText().toString()));
+        viewingRecord.setComments(comments.getText().toString());
         listItems.set(listPosition,viewingRecord);
         saveInFile();
+        finish();
+    }
+
+    public void resetInitialValue(View v){
+        viewingRecord.setInitialValue(Integer.parseInt(currVal.getText().toString()));
+    }
+
+    public void deleteRecord(View v){
+        listItems.remove(listPosition);
+        saveInFile();
+        finish();
     }
 
     private void loadFromFile() {

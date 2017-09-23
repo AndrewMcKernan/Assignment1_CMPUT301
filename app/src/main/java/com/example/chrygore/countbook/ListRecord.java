@@ -62,6 +62,10 @@ public class ListRecord {
         return this.initialValue;
     }
 
+    public void setInitialValue(int value){
+        this.initialValue = value;
+    }
+
     @Override
     public String toString(){
         return recordName + "  " + Integer.toString(currentValue) + "  " + getDateOfCreation();

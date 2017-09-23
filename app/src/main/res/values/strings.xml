@@ -13,4 +13,7 @@
     <string name="InitValTitle">Initial Value</string>
     <string name="DateTitle">Date Of Last Change</string>
     <string name="CommentsTitle">Comments</string>
+    <string name="DeleteButton">Delete</string>
+    <string name="SaveButton">Save</string>
+    <string name="ResetButton">Reset</string>
 </resources>
