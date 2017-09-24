@@ -52,6 +52,7 @@ public class AddNewRecordActivity extends AppCompatActivity {
         }
 
         if (isValid){
+            // if the input is valid, save the new record and exit
             ListRecord itemToAdd = new ListRecord(Integer.parseInt(initialVal.getText().toString()),name.getText().toString(),comments.getText().toString());
             listItems.add(itemToAdd);
             saveInFile();

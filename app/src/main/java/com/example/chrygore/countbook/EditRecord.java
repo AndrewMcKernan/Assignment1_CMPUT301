@@ -25,7 +25,7 @@ import static android.provider.Telephony.Mms.Part.FILENAME;
  */
 
 public class EditRecord extends AppCompatActivity {
-    //this class is similar to
+    //this class is similar to ViewRecordActivity, but allows the user to edit fields, as well as delete records.
     int listPosition;
     ArrayList<ListRecord> listItems = new ArrayList<ListRecord>();
     ListRecord viewingRecord;
@@ -59,7 +59,8 @@ public class EditRecord extends AppCompatActivity {
         comments.setText(viewingRecord.getComments());
     }
 
-    public void saveChanges(View v){
+    public void saveButton(View v){
+        // save all changes to file and end activity
         viewingRecord.setTitle(name.getText().toString());
         if (viewingRecord.getCurrentValue() != Integer.parseInt(currVal.getText().toString())){
             viewingRecord.setDate(new Date());
@@ -77,6 +78,7 @@ public class EditRecord extends AppCompatActivity {
     }
 
     public void deleteRecord(View v){
+        // delete record and end activity
         listItems.remove(listPosition);
         saveInFile();
         finish();
