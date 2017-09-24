@@ -1,5 +1,6 @@
 package com.example.chrygore.countbook;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -10,35 +11,26 @@ public class ListRecord {
     private int initialValue;
     private int currentValue;
     private String recordName;
-    private Date dateOfCreation;
     private String comments;
+    // Calendar was used here over Date and SimpleDateFormat since it is easier to retrieve the desired date format with this than with
+    // Date, and SimpleDateFormat was causing issues with saving with Json
+    private Calendar calendar;
 
-    public ListRecord(){
-        this.dateOfCreation = new Date();
-        this.initialValue = 0;
-        this.currentValue = 0;
-        this.recordName = "Unnamed record";
-        this.comments = "";
-    }
-
-    public ListRecord(int initialValue){
-        this.dateOfCreation = new Date();
-        this.initialValue = initialValue;
-        this.currentValue = initialValue;
-        this.recordName = "Unnamed record";
-        this.comments = "";
-    }
-
-    public ListRecord(int initialValue, String title){
-        this.dateOfCreation = new Date();
+    public ListRecord(int initialValue, String title, String comments){
         this.initialValue = initialValue;
         this.currentValue = initialValue;
         this.recordName = title;
-        this.comments = "";
+        this.comments = comments;
+        calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
     }
 
     public String getTitle(){
         return this.recordName;
+    }
+
+    public void setDate(Date date){
+        calendar.setTime(date);
     }
 
     public void setTitle(String recordName){
@@ -53,20 +45,14 @@ public class ListRecord {
         this.comments = comments;
     }
 
-    public Date getDateOfCreation(){
-        return this.dateOfCreation;
-    }
+    public String getDateOfCreation(){
 
-    public void incrementCurrentValue(){
-        this.currentValue++;
-    }
-
-    public void decrementCurrentValue(){
-        this.currentValue--;
+        return calendar.get(Calendar.YEAR) + "-" + calendar.get(Calendar.MONTH) + "-" + calendar.get(Calendar.DAY_OF_MONTH);
     }
 
     public void setCurrentValue(int currentValue){
-        this.currentValue = currentValue;
+        if (currentValue >= 0)
+            this.currentValue = currentValue;
     }
 
     public int getCurrentValue(){
@@ -75,6 +61,16 @@ public class ListRecord {
 
     public int getInitialValue(){
         return this.initialValue;
+    }
+
+    public void setInitialValue(int value){
+        this.initialValue = value;
+    }
+
+    @Override
+    public String toString(){
+        // this toString() format is what is showed in the list in the main screen
+        return recordName + "          " + Integer.toString(currentValue) + "          " + getDateOfCreation();
     }
 
 }

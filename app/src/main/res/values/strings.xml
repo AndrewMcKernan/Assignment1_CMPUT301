@@ -5,4 +5,15 @@
     <string name="enterInitialRecordValue">Enter Initial Value</string>
     <string name="enterComments">Enter Comments</string>
     <string name="saveRecordButton">Save Record</string>
+    <string name="incrementButton">+</string>
+    <string name="decrementButton">-</string>
+    <string name="editButton">Edit</string>
+    <string name="RecordNameTitle">Record Name</string>
+    <string name="CurrentValueTitle">Current Value</string>
+    <string name="InitValTitle">Initial Value</string>
+    <string name="DateTitle">Date Of Last Change</string>
+    <string name="CommentsTitle">Comments</string>
+    <string name="DeleteButton">Delete</string>
+    <string name="SaveButton">Save</string>
+    <string name="ResetButton">Reset</string>
 </resources>
