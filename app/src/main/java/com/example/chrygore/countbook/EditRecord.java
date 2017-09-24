@@ -26,16 +26,16 @@ import static android.provider.Telephony.Mms.Part.FILENAME;
 
 public class EditRecord extends AppCompatActivity {
     //this class is similar to ViewRecordActivity, but allows the user to edit fields, as well as delete records.
-    int listPosition;
-    ArrayList<ListRecord> listItems = new ArrayList<ListRecord>();
-    ListRecord viewingRecord;
-    TextView date;
-    TextView name;
-    TextView initVal;
-    TextView currVal;
-    TextView comments;
+    private int listPosition;
+    private ArrayList<ListRecord> listItems = new ArrayList<ListRecord>();
+    private ListRecord viewingRecord;
+    private TextView date;
+    private TextView name;
+    private TextView initVal;
+    private TextView currVal;
+    private TextView comments;
 
-    public void onCreate(Bundle SavedInstanceState){
+    protected void onCreate(Bundle SavedInstanceState){
         super.onCreate(SavedInstanceState);
         setContentView(R.layout.edit_record);
         //get the record that the user selected
@@ -45,7 +45,7 @@ public class EditRecord extends AppCompatActivity {
         populatePage();
     }
 
-    public void populatePage(){
+    private void populatePage(){
         //fill all the fields on the page with the contents of the viewingRecord
         date = (TextView) findViewById(R.id.dateContainer);
         date.setText(viewingRecord.getDateOfCreation());

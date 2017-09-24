@@ -21,8 +21,8 @@ import java.util.List;
 import static android.provider.Telephony.Mms.Part.FILENAME;
 
 public class MainActivity extends ListActivity {
-    List<ListRecord> listItems = new ArrayList<ListRecord>();
-    ArrayAdapter<ListRecord> adapter;
+    private List<ListRecord> listItems = new ArrayList<ListRecord>();
+    private ArrayAdapter<ListRecord> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

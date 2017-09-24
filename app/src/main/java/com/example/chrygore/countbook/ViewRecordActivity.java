@@ -25,9 +25,9 @@ import static android.provider.Telephony.Mms.Part.FILENAME;
  */
 
 public class ViewRecordActivity extends AppCompatActivity{
-    int listPosition;
-    ArrayList<ListRecord> listItems;
-    ListRecord viewingRecord;
+    private int listPosition;
+    private ArrayList<ListRecord> listItems;
+    private ListRecord viewingRecord;
     @Override
     public void onCreate(Bundle SavedInstanceState){
         super.onCreate(SavedInstanceState);
@@ -39,7 +39,7 @@ public class ViewRecordActivity extends AppCompatActivity{
         populatePage();
     }
 
-    public void populatePage(){
+    private void populatePage(){
         //fill all the fields on the page with the contents of the viewingRecord
         TextView date = (TextView) findViewById(R.id.dateContainer);
         date.setText(viewingRecord.getDateOfCreation());
