@@ -1,17 +1,12 @@
 package com.example.chrygore.countbook;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,7 +17,6 @@ import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
-
 import static android.provider.Telephony.Mms.Part.FILENAME;
 
 /**
@@ -72,7 +66,6 @@ public class AddNewRecordActivity extends AppCompatActivity {
             Gson gson = new Gson();
             Type listType = new TypeToken<ArrayList<ListRecord>>() {}.getType();
             listItems = gson.fromJson(in,listType);
-            //https://github.com/google/gson/blob/master/UserGuide.md
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block

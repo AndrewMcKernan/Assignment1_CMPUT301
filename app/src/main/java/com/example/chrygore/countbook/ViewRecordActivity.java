@@ -1,6 +1,7 @@
 package com.example.chrygore.countbook;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -31,6 +32,7 @@ public class ViewRecordActivity extends AppCompatActivity{
     public void onCreate(Bundle SavedInstanceState){
         super.onCreate(SavedInstanceState);
         setContentView(R.layout.view_record);
+        // get the record that the user selected
         listPosition = getIntent().getIntExtra("position",0);
         loadFromFile();
         viewingRecord = listItems.get(listPosition);
@@ -38,6 +40,7 @@ public class ViewRecordActivity extends AppCompatActivity{
     }
 
     public void populatePage(){
+        //fill all the fields on the page with the contents of the viewingRecord
         TextView date = (TextView) findViewById(R.id.dateContainer);
         date.setText(viewingRecord.getDateOfCreation());
         TextView name = (TextView) findViewById(R.id.nameContainer);
@@ -76,7 +79,6 @@ public class ViewRecordActivity extends AppCompatActivity{
             Gson gson = new Gson();
             Type listType = new TypeToken<ArrayList<ListRecord>>() {}.getType();
             listItems = gson.fromJson(in,listType);
-            //https://github.com/google/gson/blob/master/UserGuide.md
 
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -102,5 +104,13 @@ public class ViewRecordActivity extends AppCompatActivity{
             // TODO Auto-generated catch block
             throw new RuntimeException();
         }
+    }
+
+    public void editRecordButton(View v){
+        //switch to editing the record, making sure to pass the position of the current record to the next activity
+        Intent intent = new Intent(ViewRecordActivity.this, EditRecord.class);
+        intent.putExtra("position",listPosition);
+        startActivity(intent);
+        finish();
     }
 }

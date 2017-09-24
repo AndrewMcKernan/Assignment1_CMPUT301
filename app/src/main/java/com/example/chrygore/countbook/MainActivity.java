@@ -1,26 +1,19 @@
 package com.example.chrygore.countbook;
 
 import android.app.ListActivity;
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.net.sip.SipAudioCall;
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
+import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +21,6 @@ import java.util.List;
 import static android.provider.Telephony.Mms.Part.FILENAME;
 
 public class MainActivity extends ListActivity {
-    //private ListView itemlistview;
     List<ListRecord> listItems = new ArrayList<ListRecord>();
     ArrayAdapter<ListRecord> adapter;
 
@@ -41,17 +33,21 @@ public class MainActivity extends ListActivity {
     @Override
     protected void onStart(){
         super.onStart();
+        //loadFromFile() is called on every onStart() to ensure that the list of items displayed is up to date
         loadFromFile();
         adapter = new ArrayAdapter<ListRecord>(this,
                 android.R.layout.simple_list_item_1,
                 listItems);
-        //itemlistview.setAdapter(adapter);
         setListAdapter(adapter);
         adapter.notifyDataSetChanged();
-
+        TextView listCount = (TextView) findViewById(R.id.listItemsCountView);
+        // display the current number of records
+        listCount.setText("Number of Counters: " + listItems.size());
+        //listener for if the user selects one of the items in the list
         this.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //tell the ViewRecordActivity which list item has been selected and start it
                 Intent intent = new Intent(MainActivity.this, ViewRecordActivity.class);
                 intent.putExtra("position",i);
                 startActivity(intent);
@@ -61,7 +57,6 @@ public class MainActivity extends ListActivity {
     }
 
     public void addNewRecord(View view) {
-        // Do something in response to button
         Intent intent = new Intent(this, AddNewRecordActivity.class);
         startActivity(intent);
     }
@@ -83,40 +78,4 @@ public class MainActivity extends ListActivity {
             			throw new RuntimeException();
         }
     }
-
-    public ArrayList<ListRecord> loadItems(){
-        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        Gson gson = new Gson();
-        ArrayList<ListRecord> arrayList;
-        try {
-            String json = sharedPrefs.getString("ListItems", null);
-            Type type = new TypeToken<ArrayList<ListRecord>>() {}.getType();
-            arrayList = gson.fromJson(json, type);
-        }catch(Exception e){
-            arrayList = new ArrayList<ListRecord>();
-        }
-        if (arrayList == null){
-            arrayList = new ArrayList<ListRecord>();
-        }
-        return arrayList;
-    }
-
-    private void saveInFile() {
-        try {
-            FileOutputStream fos = openFileOutput(FILENAME,
-            					Context.MODE_PRIVATE);
-            			OutputStreamWriter writer = new OutputStreamWriter(fos);
-            			Gson gson = new Gson();
-            			gson.toJson(listItems, writer);
-            			writer.flush();
-            fos.close();
-        } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
-            			throw new RuntimeException();
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            			throw new RuntimeException();
-        }
-    }
-
 }

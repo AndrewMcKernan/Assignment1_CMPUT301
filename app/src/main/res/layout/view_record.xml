@@ -155,16 +155,17 @@
     <Button
         android:id="@+id/editButton"
         android:layout_width="0dp"
-        android:textStyle="bold"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:onClick="editRecordButton"
         android:text="@string/editButton"
-        app:layout_constraintLeft_toRightOf="@+id/decrementButton"
-        app:layout_constraintRight_toLeftOf="@+id/incrementButton"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintLeft_toRightOf="@+id/decrementButton"
+        app:layout_constraintRight_toLeftOf="@+id/incrementButton" />
 
     <TextView
         android:id="@+id/commentsContainer"

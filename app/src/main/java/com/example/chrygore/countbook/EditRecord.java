@@ -5,10 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -27,7 +25,7 @@ import static android.provider.Telephony.Mms.Part.FILENAME;
  */
 
 public class EditRecord extends AppCompatActivity {
-
+    //this class is similar to
     int listPosition;
     ArrayList<ListRecord> listItems = new ArrayList<ListRecord>();
     ListRecord viewingRecord;
@@ -36,9 +34,11 @@ public class EditRecord extends AppCompatActivity {
     TextView initVal;
     TextView currVal;
     TextView comments;
+
     public void onCreate(Bundle SavedInstanceState){
         super.onCreate(SavedInstanceState);
-        setContentView(R.layout.view_record);
+        setContentView(R.layout.edit_record);
+        //get the record that the user selected
         listPosition = getIntent().getIntExtra("position",0);
         loadFromFile();
         viewingRecord = listItems.get(listPosition);
@@ -46,6 +46,7 @@ public class EditRecord extends AppCompatActivity {
     }
 
     public void populatePage(){
+        //fill all the fields on the page with the contents of the viewingRecord
         date = (TextView) findViewById(R.id.dateContainer);
         date.setText(viewingRecord.getDateOfCreation());
         name = (TextView) findViewById(R.id.nameContainer);
@@ -72,6 +73,7 @@ public class EditRecord extends AppCompatActivity {
 
     public void resetInitialValue(View v){
         viewingRecord.setInitialValue(Integer.parseInt(currVal.getText().toString()));
+        initVal.setText(currVal.getText().toString());
     }
 
     public void deleteRecord(View v){
@@ -88,7 +90,6 @@ public class EditRecord extends AppCompatActivity {
             Type listType = new TypeToken<ArrayList<ListRecord>>() {}.getType();
             listItems = gson.fromJson(in,listType);
             //https://github.com/google/gson/blob/master/UserGuide.md
-
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             listItems = new ArrayList<ListRecord>();
@@ -97,6 +98,7 @@ public class EditRecord extends AppCompatActivity {
             throw new RuntimeException();
         }
     }
+
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME,

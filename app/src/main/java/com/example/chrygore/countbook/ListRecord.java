@@ -1,6 +1,5 @@
 package com.example.chrygore.countbook;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -13,6 +12,8 @@ public class ListRecord {
     private int currentValue;
     private String recordName;
     private String comments;
+    // Calendar was used here over Date and SimpleDateFormat since it is easier to retrieve the desired date format with this than with
+    // Date, and SimpleDateFormat was causing issues with saving with Json
     private Calendar calendar;
 
     public ListRecord(int initialValue, String title, String comments){
@@ -68,7 +69,8 @@ public class ListRecord {
 
     @Override
     public String toString(){
-        return recordName + "  " + Integer.toString(currentValue) + "  " + getDateOfCreation();
+        // this toString() format is what is showed in the list in the main screen
+        return recordName + "          " + Integer.toString(currentValue) + "          " + getDateOfCreation();
     }
 
 }
