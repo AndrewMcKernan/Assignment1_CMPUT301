@@ -3,6 +3,24 @@
 
     <item
         is-multidex="true"
+        jar="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8aee71fa9dcb9f5317775d8a285d4a4885f88bad/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9a80aebec6d351a707ce362dab709eca3ddea8a8">
+        <dex dex="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_993ea83ff47a4dbeab22c90bcf07ebe018f1ff7b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/Assignment1_CMPUT301/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"

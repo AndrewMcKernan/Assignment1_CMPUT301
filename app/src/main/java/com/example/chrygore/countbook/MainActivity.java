@@ -3,9 +3,11 @@ package com.example.chrygore.countbook;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -20,7 +22,8 @@ import java.util.List;
 
 import static android.provider.Telephony.Mms.Part.FILENAME;
 
-public class MainActivity extends ListActivity {
+public class MainActivity extends AppCompatActivity {
+    private ListView listView;
     private List<ListRecord> listItems = new ArrayList<ListRecord>();
     private ArrayAdapter<ListRecord> adapter;
 
@@ -35,16 +38,18 @@ public class MainActivity extends ListActivity {
         super.onStart();
         //loadFromFile() is called on every onStart() to ensure that the list of items displayed is up to date
         loadFromFile();
+        listView = (ListView) findViewById(R.id.myListView);
         adapter = new ArrayAdapter<ListRecord>(this,
                 android.R.layout.simple_list_item_1,
                 listItems);
-        setListAdapter(adapter);
+        listView.setAdapter(adapter);
+        //setListAdapter(adapter);
         adapter.notifyDataSetChanged();
         TextView listCount = (TextView) findViewById(R.id.listItemsCountView);
         // display the current number of records
         listCount.setText("Number of Counters: " + listItems.size());
         //listener for if the user selects one of the items in the list
-        this.getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //tell the ViewRecordActivity which list item has been selected and start it
