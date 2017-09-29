@@ -65,6 +65,7 @@ public class EditRecord extends AppCompatActivity {
         if (viewingRecord.getCurrentValue() != Integer.parseInt(currVal.getText().toString())){
             viewingRecord.setDate(new Date());
         }
+        viewingRecord.setInitialValue(Integer.parseInt(initVal.getText().toString()));
         viewingRecord.setCurrentValue(Integer.parseInt(currVal.getText().toString()));
         viewingRecord.setComments(comments.getText().toString());
         listItems.set(listPosition,viewingRecord);
@@ -73,8 +74,8 @@ public class EditRecord extends AppCompatActivity {
     }
 
     public void resetInitialValue(View v){
-        viewingRecord.setInitialValue(Integer.parseInt(currVal.getText().toString()));
-        initVal.setText(currVal.getText().toString());
+        viewingRecord.setCurrentValue(Integer.parseInt(initVal.getText().toString()));
+        currVal.setText(initVal.getText().toString());
     }
 
     public void deleteRecord(View v){
