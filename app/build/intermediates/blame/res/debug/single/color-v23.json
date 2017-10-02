@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_color_highlight_material.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/color-v23/abc_btn_colored_text_material.xml"
+    }
+]
