@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/chrygore/.android/build-cache/e7a56e8741e07da4c7fbc7c2633cded0e3b5cacf/output/res/layout-v21/notification_action_tombstone.xml"
+    }
+]

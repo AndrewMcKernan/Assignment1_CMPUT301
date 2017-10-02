@@ -1,0 +1,7 @@
+#Wed Sep 27 13:12:47 MDT 2017
+base.0=/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_993ea83ff47a4dbeab22c90bcf07ebe018f1ff7b
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8aee71fa9dcb9f5317775d8a285d4a4885f88bad/classes.dex
+base.1=/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_8aee71fa9dcb9f5317775d8a285d4a4885f88bad
+file.0=/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_993ea83ff47a4dbeab22c90bcf07ebe018f1ff7b/classes.dex

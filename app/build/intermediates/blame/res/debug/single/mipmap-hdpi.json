@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png",
+        "source": "/home/chrygore/Documents/School/Third Year Semester 2/CMPUT 301/A1/Assignment1_CMPUT301/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    }
+]
